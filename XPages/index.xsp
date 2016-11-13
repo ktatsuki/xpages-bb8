@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" viewState="nostate">
+	<xp:this.resources>
+		<xp:script src="/jquery.min.js" clientSide="true"></xp:script>
+		<xp:script src="/mqttws31.js" clientSide="true"></xp:script>
+		<xp:script src="/date.js" clientSide="true"></xp:script>
+		<xp:script src="/sp_mqtt_bb8.js" clientSide="true"></xp:script>
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		</xp:metaData>
+		<xp:styleSheet href="/customStyles.css"></xp:styleSheet>
+	</xp:this.resources>
+
+	<xp:div styleClass="mainFrame">
+		<xp:div styleClass="mainBox wideBox">
+
+			<xp:panel id="TopPanel" styleClass="bg_grey">
+				<xp:text escape="false" tagName="h1" id="computedField1"
+					styleClass="mb10">
+					<xp:this.value><![CDATA[#{javascript:return "<a href=\""+context.getUrl().getPath()+"\">"+@DbTitle()+"</a>"}]]></xp:this.value>
+				</xp:text>
+			</xp:panel>
+
+			<xp:div styleClass="inlineBox mb20"
+				style="background-color: #eeeeee;">
+				<xp:div style="text-align:center">
+					<xp:image url="/xpages_120x120.png" id="image1"
+						styleClass="mr10" style="width:100px;">
+					</xp:image>
+					<xp:image url="/bb-8.png" id="image3"
+						styleClass="mr10" style="width:100px;">
+					</xp:image>
+					<xp:image url="/bluemix_logo_multi_181.png"
+						id="image2" styleClass="mr10" style="width:100px;">
+					</xp:image>
+				</xp:div>
+			</xp:div>
+
+
+			<xp:div styleClass="col-lg-12">
+				<h2>Change Color</h2>
+				<xp:button id="buttonRed" value="Red">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[Publish("#red");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Blue" id="buttonBlue">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[Publish("#blue");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:button value="Green" id="buttonGreen">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[Publish("#green");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				<xp:br />
+<!-- 
+				<xp:br />
+				<xp:button value="Run" id="buttonLand"
+					style="padding:20px; width:100%;">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[publish("#spherorun");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+ -->
+			</xp:div>
+			<xp:div styleClass="col-lg-12">
+				<h3>Motion Command:</h3>
+				<h3 style="font-size:2.0em; color:red;"
+					id="detectmotion">
+				</h3>
+
+				<h2>Get Sensor Info through HTML5</h2>
+				<h3>Location Info</h3>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Keys</th>
+								<th>Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Latitude</td>
+								<td id="lat"></td>
+							</tr>
+							<tr>
+								<td>Longitude</td>
+								<td id="lng"></td>
+							</tr>
+							<tr>
+								<td>LatLng Accuracy</td>
+								<td id="accLatlng"></td>
+							</tr>
+							<tr>
+								<td>Altitude</td>
+								<td id="alt"></td>
+							</tr>
+							<tr>
+								<td>Altitude accuracy</td>
+								<td id="accAlt"></td>
+							</tr>
+							<tr>
+								<td>Heading</td>
+								<td id="heading"></td>
+							</tr>
+							<tr>
+								<td>Speed</td>
+								<td id="speed"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h2>Gyro Sensor</h2>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Keys</th>
+								<th>Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>alpha</td>
+								<td id="alpha"></td>
+							</tr>
+							<tr>
+								<td>beta</td>
+								<td id="beta"></td>
+							</tr>
+							<tr>
+								<td>gamma</td>
+								<td id="gamma"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h2>Motion Sensor</h2>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Keys</th>
+								<th>Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Acceleration: X</td>
+								<td id="ac_x"></td>
+							</tr>
+							<tr>
+								<td>Acceleration: Y</td>
+								<td id="ac_y"></td>
+							</tr>
+							<tr>
+								<td>Acceleration: Z</td>
+								<td id="ac_z"></td>
+							</tr>
+							<tr>
+								<td>
+									Accel. incl. G: X
+								</td>
+								<td id="acg_x"></td>
+							</tr>
+							<tr>
+								<td>
+									Accel. incl. G: Y
+								</td>
+								<td id="acg_y"></td>
+							</tr>
+							<tr>
+								<td>
+									Accel. incl. G: Z
+								</td>
+								<td id="acg_z"></td>
+							</tr>
+							<tr>
+								<td>Rotation: alpha</td>
+								<td id="rot_alpha"></td>
+							</tr>
+							<tr>
+								<td>Rotation: beta</td>
+								<td id="rot_beta"></td>
+							</tr>
+							<tr>
+								<td>Rotation: gamma</td>
+								<td id="rot_gamma"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3>Battery Level</h3>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Keys</th>
+								<th>Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Battery Level(%)</td>
+								<td id="battery_level"></td>
+							</tr>
+							<tr>
+								<td>Battery Discharging(s)</td>
+								<td id="battery_discharging"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</xp:div>
+		</xp:div>
+	</xp:div>
+
+</xp:view>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.6'
+ replicaid='49258033001AE082'>
+<noteinfo noteid='172' unid='80257E500050672D85256E3D001368DC' sequence='42'>
+<created><datetime dst='true'>20040216T233200,28-04</datetime></created>
+<modified><datetime>20160919T135334,63+09</datetime></modified>
+<revised><datetime dst='true'>20160121T071617,47-04</datetime></revised>
+<lastaccessed><datetime>20160919T135334,63+09</datetime></lastaccessed>
+<addedtofile><datetime>20160919T135334,63+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst='true'>20070228T131401,71-04</datetime><datetime
+ dst='true'>20100317T200331,21-04</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TITLE'><text>$TemplateBuild</text></item>
+<item name='$Fields'><text>$TemplateBuild</text></item>
+<item name='$Flags'><text/></item>
+<item name='$Info' sign='true'><text>$TemplateBuild</text></item>
+<item name='$Body' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAgwQBAIX/CAAAAAAA3QYAAIr/iv8yAIoAAAUAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAJFRlbXBsYXRlQnVpbGTeBgAAiv+F/wgAAAAAAA==
+</rawitemdata></item>
+<item name='$TemplateBuild' sign='true'><text>Bluemix</text></item>
+<item name='$TemplateBuildName' sign='true'><text>XPagesBluemixApp</text></item>
+<item name='$TemplateBuildDate' sign='true'><datetime dst='true'>20160121T115112,00+01</datetime></item>
+<item name='$TemplateBuildTool' sign='true'><text>CICO</text></item></note>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.6" replicaid="49258033001AE082" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="162" sequence="3" unid="23EDAF81A9BF894580257F0200644245">
+<created><datetime dst="true">20151119T191505,65+01</datetime></created>
+<modified><datetime>20160919T135334,55+09</datetime></modified>
+<revised><datetime dst="true">20160121T071617,39-04</datetime></revised>
+<lastaccessed><datetime>20160919T135334,55+09</datetime></lastaccessed>
+<addedtofile><datetime>20160919T135334,55+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/png</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20151119T185351,18+01</datetime></item>
+<item name="$ImageNames" sign="true"><text>dominodesigner_128x128.png</text></item>
+<item name="$TITLE" sign="true"><text>designer.png</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

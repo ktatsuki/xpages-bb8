@@ -1,0 +1,113 @@
+.moreInfoBox{ 
+	border-right: 3px solid #ffffff; 
+}
+@media (max-width: 992px) { 
+	.moreInfoBox{ 
+		border-right: none;
+		padding-bottom: 15px; 
+	} 
+}
+.imageLeft {
+	margin-right:100px;
+}
+.imageRight {
+	margin-left:100px;
+}
+*[dir="rtl"] .imageRight{
+	margin-right:100px;
+}
+*[dir="rtl"] .imageLeft{
+	margin-left:100px;
+}
+@media (max-width: 768px) {
+	.imageLeft {
+		margin-right:20px;
+	}
+	.imageRight {
+		margin-left:20px;
+	}
+}
+.mainPanel {
+	text-align:center;
+	margin-top:20px;
+	padding:20px;
+	background-color:#eeeeee;
+	border-radius:10px 10px 0px 0px;
+}
+
+/** Custom */
+* {
+    font-family: 'ヒラギノ角ゴ Pro W6','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif !important;
+    word-break: break-all;
+}
+body{background-color: #f4f5f6;}
+a {color: #105cb6; text-decoration: none;}
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.7em;
+    font-weight: normal;
+    line-height: 1.2em;
+    color: #444;
+}
+
+.mt10{margin-top:10px !important;}
+.mt40{margin-top:40px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb30{margin-bottom:30px !important;}
+.mb40{margin-bottom:40px !important;}
+.ml10{margin-left:10px !important;}
+.mr10{margin-right:10px !important;}
+.mtb10{margin-bottom: 10px !important; margin-top: 10px !important; }
+
+.right{text-align: right !important;}
+.center{text-align: center !important;}
+.sml_icon{width:20px; height:20px; padding-left:20px; }
+.red{color:lightcoral;}
+    
+.mainFrame {
+	margin: 0 auto;
+    box-shadow: none !important;
+    width: auto;
+    border: none;
+    color:#5e5e5e
+}
+.mainFrame .headerBox, .mainFrame .mainBox{
+    background: #fff;
+    margin: 20px auto 0;
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 6px;
+    width: 492px;
+    border-width: 1px;
+    border-style: solid;
+	border-color: #d1d1d1 #d1d1d1 #cbcbcb;
+    box-shadow: 0 1px 2px rgba(175,175,175,0.2);
+}
+
+.inlineBox {
+    border-radius: 6px!important;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+}
+
+@media only screen and (max-width: 568px), only screen and (max-device-width: 568px) {
+	body {
+		min-height: 400px;
+	}
+	
+	.mainFrame {
+		border-radius: 0 0 0 0 !important;
+		border-width: 0 0 1px;
+		box-shadow: none;
+	}
+	.mainFrame .headerBox, .mainFrame .mainBox{
+		padding: 20px;
+		background: #f9f9f9;
+		border: 1px solid #e6e6e6;
+		width: auto !important;
+		margin: 15px auto 0 !important;
+	}
+}
